@@ -15,7 +15,7 @@ public class StudentDaoImpl implements StudentDao{
 		}
 	@Override
 	public List<Student> getStudents() {
-		List<Student> studentlList=entityManager.createQuery("Select * from Student",Student.class).getResultList();
+		List<Student> studentlList=entityManager.createQuery("from Student",Student.class).getResultList();
 		return studentlList;
 	}
 
